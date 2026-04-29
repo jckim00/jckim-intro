@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김종철 자기소개</title>
+    <style>
+        /* 지정된 색상 변수 설정 */
+        :root {
+            --navy: #1F3864;
+            --white: #ffffff;
+            --dark-gray: #333333;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--white);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 480px; /* 스마트폰 세로 화면에 최적화된 너비 */
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* 선택 기능: 원형 프로필 사진 */
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: var(--dark-gray);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 14px;
+            object-fit: cover;
+            overflow: hidden;
+        }
+        
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* 이름 · 직책 · 회사 (본문의 1.5배 크기) */
+        h1 {
+            color: var(--navy);
+            font-size: 24px; /* 본문(16px)의 1.5배 */
+            margin: 0 0 15px 0;
+            word-break: keep-all;
+        }
+
+        /* 3~5줄 자기소개 */
+        .intro {
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-align: center;
+            word-break: keep-all;
+            color: var(--dark-gray);
+        }
+
+        .intro p {
+            margin: 0 0 5px 0;
+        }
+
+        h2 {
+            color: var(--navy);
+            font-size: 20px;
+            border-bottom: 2px solid var(--navy);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+
+        /* 최근 경력 3건 리스트 */
+        .career-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .career-card {
+            border: 1px solid var(--dark-gray);
+            border-radius: 8px;
+            padding: 15px;
+            background-color: var(--white);
+        }
+
+        .career-header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 8px;
+        }
+
+        .career-year {
+            font-size: 13px;
+            font-weight: bold;
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+
+        .career-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--dark-gray);
+            margin: 0;
+        }
+
+        .career-summary {
+            font-size: 14px;
+            margin: 0;
+            color: var(--dark-gray);
+            word-break: keep-all;
+        }
+
+        /* 하단 액션 버튼 */
+        .actions {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            box-sizing: border-box;
+            border: none;
+            transition: opacity 0.2s;
+        }
+
+        .btn:active {
+            opacity: 0.8;
+        }
+
+        .btn-primary {
+            background-color: var(--navy);
+            color: var(--white);
+        }
+
+        .btn-outline {
+            background-color: var(--white);
+            color: var(--navy);
+            border: 2px solid var(--navy);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 상단 프로필 및 자기소개 -->
+        <div class="profile-section">
+            <div class="profile-img">
+                <!-- 프로필 이미지가 있다면 아래 src에 경로를 넣어주세요. -->
+                <!-- <img src="profile.jpg" alt="김종철 프로필"> -->
+                프로필<br>사진
+            </div>
+            
+            <h1>김종철 · 부장 · (주)AI컨설팅</h1>
+            
+            <div class="intro">
+                <p>안녕하세요. 40년 경력의 AI 컨설턴트 김종철입니다.</p>
+                <p>현장에서 쌓은 풍부한 경험과 노하우를 바탕으로</p>
+                <p>기업 비즈니스에 최적화된 인공지능 솔루션을 제안합니다.</p>
+                <p>새로운 기술 트렌드를 비즈니스 가치로 연결하며,</p>
+                <p>언제나 최고의 성과를 이끌어내기 위해 노력합니다.</p>
+            </div>
+        </div>
+
+        <!-- 최근 경력 -->
+        <h2>최근 경력</h2>
+        <div class="career-list">
+            <div class="career-card">
+                <div class="career-header">
+                    <span class="career-year">2024 - 현재</span>
+                    <h3 class="career-title">(주)AI컨설팅 · AI 컨설턴트</h3>
+                </div>
+                <p class="career-summary">기업 맞춤형 AI 도입 전략 수립 및 기술 컨설팅 수행</p>
+            </div>
+            
+            <div class="career-card">
+                <div class="career-header">
+                    <span class="career-year">2018 - 2023</span>
+                    <h3 class="career-title">(주)데이터테크 · 데이터 분석 팀장</h3>
+                </div>
+                <p class="career-summary">빅데이터 기반 예측 모델 기획 및 개발 프로젝트 총괄</p>
+            </div>
+            
+            <div class="career-card">
+                <div class="career-header">
+                    <span class="career-year">2010 - 2017</span>
+                    <h3 class="career-title">(주)IT솔루션즈 · 시스템 아키텍트</h3>
+                </div>
+                <p class="career-summary">대규모 기업형 시스템 아키텍처 설계 및 구축 리드</p>
+            </div>
+        </div>
+
+        <!-- 연락처 버튼 -->
+        <div class="actions">
+            <!-- 이메일 보내기 (메일 앱 열림) -->
+            <a href="mailto:jongchul.kim@example.com" class="btn btn-primary">이메일 보내기</a>
+            
+            <!-- 전화 걸기 (전화번호 클립보드 복사) -->
+            <button onclick="copyPhone()" class="btn btn-outline">전화 걸기</button>
+        </div>
+    </div>
+
+    <!-- 클립보드 복사 스크립트 -->
+    <script>
+        function copyPhone() {
+            var phoneStr = "010-1234-5678"; // 복사될 전화번호
+            
+            // 최신 클립보드 API 지원 여부 확인
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(phoneStr).then(function() {
+                    alert("전화번호(" + phoneStr + ")가 클립보드에 복사되었습니다.");
+                }).catch(function() {
+                    fallbackCopyTextToClipboard(phoneStr);
+                });
+            } else {
+                fallbackCopyTextToClipboard(phoneStr);
+            }
+        }
+
+        // 구형 브라우저 또는 비보안 컨텍스트용 폴백
+        function fallbackCopyTextToClipboard(text) {
+            var textArea = document.createElement("textarea");
+            textArea.value = text;
+            
+            // 화면에서 보이지 않게 처리
+            textArea.style.top = "0";
+            textArea.style.left = "0";
+            textArea.style.position = "fixed";
+            textArea.style.opacity = "0";
+            
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+                var successful = document.execCommand('copy');
+                if (successful) {
+                    alert("전화번호(" + text + ")가 클립보드에 복사되었습니다.");
+                } else {
+                    alert("복사에 실패했습니다. 수동으로 복사해주세요: " + text);
+                }
+            } catch (err) {
+                alert("복사에 실패했습니다. 수동으로 복사해주세요: " + text);
+            }
+            
+            document.body.removeChild(textArea);
+        }
+    </script>
+</body>
+</html>
